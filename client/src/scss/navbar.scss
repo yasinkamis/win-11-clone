@@ -1,0 +1,83 @@
+.navbar{
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    height: 60px;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    -moz-backdrop-filter: blur(2px);
+    @include flex(center,center);
+    &_icons{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        @include flex(center,center);
+        transition: all ease-in-out .2s;
+        margin: 0 5px;
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        img{
+            width: 70%;
+        }
+    }
+    &_miniIcons{
+        position: absolute;
+        width: auto;
+        height: 100%;
+        right: 10px;
+        bottom: 0;
+        @include flex(center,space-around);
+        &_arrow{
+            position: relative;
+            height: 60px;
+            @include flex(center,center);
+            transition: all ease-in-out .2s;
+            padding: 0 5px;
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            img{
+                position: relative;
+                width: 15px;
+            }
+        }
+        &_control{
+            position: relative;
+            height: 40px;
+            border-radius: 5px;
+            @include flex(center,center);
+            transition: all ease-in-out .2s;
+            padding: 0 5px;
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            img{
+                position: relative;
+                margin: 0 3px;
+                width: 18px;
+            }
+        }
+        &_time{
+            position: relative;
+            height: 50px;
+            border-radius: 5px;
+            @include flex(flex-end,center);
+            flex-direction: column;
+            transition: all ease-in-out .2s;
+            padding: 0 10px;
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+            p{
+                color: #fff;
+                font-size: 0.8em;
+                line-height: normal;
+                margin: 2px 0;
+                cursor: default;
+            }
+        }
+    }
+}

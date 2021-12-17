@@ -1,0 +1,51 @@
+.chromePage{
+    position: absolute;
+    width: 100wh;
+    height: calc(100% - 60px);
+    padding: 0 !important;
+    z-index: 10;
+    &_upper{
+        position: relative;
+        width: 100%;
+        height: 5%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 15;
+        @include flex(center,flex-end);
+        &_alt{
+            position: relative;
+            width: 30px;
+            height: 80%;
+            @include flex(center,center);
+            background-color: rgba(218, 165, 32, 0.8);
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+            cursor: pointer;
+            &:hover{
+                background-color: rgba(218, 165, 32, 1);
+            }
+            img{
+                position: relative;
+                width: 80%;
+            }
+        }
+        &_close{
+            position: relative;
+            width: 30px;
+            height: 80%;
+            @include flex(center,center);
+            background-color: rgba(255, 0, 0, 0.8);
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+            cursor: pointer;
+            &:hover{
+                background-color: rgba(255, 0, 0, 1);
+            }
+            img{
+                position: relative;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.desktop{
+    position: relative;
+    width: 100%;
+    padding: 0 !important;
+    height: 100vh;
+    background: rgb(22,0,64);
+    background: linear-gradient(90deg, rgba(22,0,64,1) 0%, rgba(154,6,128,1) 100%);
+    @include flex(flex-start,flex-start);
+    flex-direction: column;
+    &_icons{
+        position: relative;
+        padding: 3px;
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+        @include flex(center,center);
+        border-radius: 10px;
+        z-index: 5;
+        img{
+            width: 80%;
+        }
+        .chrome{
+            width: 70%;
+        }
+        &.active{
+            background-color: rgba(85, 143, 250, 0.404);
+        }
+    }
+}
