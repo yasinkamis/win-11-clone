@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Background from "../assets/login/background.png"
 import Profile from "../assets/login/profile.png"
 

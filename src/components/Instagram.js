@@ -45,20 +45,20 @@ const Instagram = () => {
                         {
                             PostUser.map((item, index) => (
                                 <div className='post-card' key={index}>
-                                    <div className='user-info'>
+                                    <div className="user-info">
                                         <img src={item.img} alt='photo' />
                                         <h6>{item.name}</h6>
                                     </div>
                                     <div className='post-img-box'>
-                                        <img src={item.img} alt='photo' onClick={() => { setSelectPhoto(item.id+1) }} />
+                                        <img src={item.img} alt='ph' onClick={() => { setSelectPhoto(item.id+1) }} />
                                     </div>
                                     <div className='post-img-nav'>
                                         <div>
-                                            <img src={Begen} alt='photo' />
-                                            <img src={Yorum} alt='photo' />
-                                            <img src={Gonder} alt='photo' />
+                                            <img src={Begen} alt='ph' />
+                                            <img src={Yorum} alt='ph' />
+                                            <img src={Gonder} alt='ph' />
                                         </div>
-                                        <img src={Kaydet} alt='photo' />
+                                        <img src={Kaydet} alt='ph' />
                                     </div>
                                     <div className='like-box'>
                                         <h6>{item.like} kişi beğendi</h6>
