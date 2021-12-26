@@ -1,0 +1,21 @@
+@import "./mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import "./desktop.scss";
+@import "./navbar.scss";
+@import "./txtfile.scss";
+@import "./chrome.scss";
+@import "./loader.scss";
+@import "./login.scss";
+@import "./google.scss";
+@import "./popup.scss";
+@import "./instagram.scss";
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}

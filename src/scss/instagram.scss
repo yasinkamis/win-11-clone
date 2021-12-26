@@ -1,0 +1,221 @@
+.instagramPage{
+    position: relative;
+    width: 100%;
+    padding: 0 !important;
+    height: 100%;
+    nav{
+        position: relative;
+        width: 100%;
+        height: 60px;
+        border-bottom: 1px solid rgb(128, 128, 128);
+        .logo-box{
+            height: 100%;
+            @include flex(center,center);
+            img{
+                width: 30%;
+            }
+        }
+        .input-box{
+            height: 100%;
+            @include flex(center,center);
+            input{
+                padding: 3px 10px;
+                border: 1px solid rgb(128, 128, 128);
+                border-radius: 5px;
+                background-color: rgba(220, 220, 220, 0.348);
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .input-nav{
+            height: 100%;
+            @include flex(center,center);
+            img{
+                width: 20px;
+                margin: 0 10px;
+                cursor: pointer;
+            }
+            .resim{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+        }
+    }
+    .i-container{
+        position: relative;
+        width: 100%;
+        height: auto;
+        background-color: rgba(220, 220, 220, 0.348);
+        padding: 0 !important;
+        .big-card{
+            position: fixed;
+            z-index: 9;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.6);
+            @include flex(center,center);
+            backdrop-filter: blur(2px);
+            -moz-backdrop-filter: blur(2px);
+            img{
+                width: 20%
+            }
+        }
+        .col-7{
+            @include flex(flex-end,flex-start);
+            flex-direction: column;
+            .story-box{
+                position: relative;
+                width: 70%;
+                height: 120px;
+                background-color: #fff;
+                margin-top: 80px;
+                border: 1px solid rgb(128, 128, 128);
+                border-radius: 5px;
+                @include flex(center,center);
+                overflow-x: scroll;
+                &::-webkit-scrollbar {
+                    width: 10px;
+                    height: 4px;
+                }
+                &::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: #fd1d1d;
+                }
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
+                .story-content{
+                    width: 100px;
+                    height: 100%;
+                    @include flex(center,center);
+                    flex-direction: column;
+                    margin: 0 10px;
+                    padding: 20px;
+                    &:nth-child(1){
+                        margin-left: 100px;
+                    }
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        margin: 10px 0 0 0;
+                        cursor: pointer;
+                        outline: 2px solid #fd1d1d;
+                        padding: 2px;
+                    }
+                    p{
+                        font-size: 0.7em;
+                        padding: 5px 0;
+                    }
+                }
+            }
+            .post-box{
+                position: relative;
+                width: 70%;
+                height: auto;
+                margin-top: 80px;
+                border-radius: 5px;
+                .post-card{
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    .user-info{
+                        position: relative;
+                        width: 100%;
+                        height: 50px;
+                        @include flex(center,flex-start);
+                        img{
+                            position: relative;
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 50%;
+                            margin: 0 10px;
+                        }
+                        h6{
+                            margin-top: 5px;
+                        }
+                    }
+                    .post-img-box{
+                        position: relative;
+                        width: 100%;
+                        img{
+                            width: 100%;
+                            cursor: pointer;
+                        }
+                    }
+                    .post-img-nav{
+                        width: 100%;
+                        @include flex(center,space-between);
+                        img{
+                            width: 25px;
+                            margin: 10px 10px;
+                            cursor: pointer;
+                        }
+                    }
+                    .like-box{
+                        width: 100%;
+                        h6{
+                            padding: 10px;
+                        }
+                    }
+                    .commit-box{
+                        width: 100%;
+                        h6{
+                            font-weight: bolder;
+                            padding: 10px;
+                            span{
+                                font-weight: normal;
+                                padding: 0 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .col-5{
+            @include flex(flex-start,flex-start);
+            flex-direction: column;
+            padding: 80px;
+            .h6-col{
+                margin:20px 0 0 60px;
+                color: rgba(0, 0, 0, 0.4);
+            }
+            .cursor{
+                cursor: pointer;
+            }
+            .bold{
+                font-weight: bold;
+            }
+            .user{
+                position: relative;
+                width: 70%;
+                @include flex(center,center);
+                div{
+                    position: relative;
+                    width: 30%;
+                    @include flex(flex-start,center);
+                    flex-direction: column;
+                    p{
+                        font-size: 0.7em;
+                    }
+                    &:nth-child(1){
+                        width:auto;
+                    }
+                }
+                img{
+                    width:60px;
+                    height: 60px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

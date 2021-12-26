@@ -1,0 +1,159 @@
+.backdrop{
+    position: absolute;
+    height: 100vh;
+    z-index: 21;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    -moz-backdrop-filter: blur(2px);
+    left: 0;
+    top: 0;
+    @include flex(center,center);
+    &.notActive{
+        display: none;
+    }
+    &_pop-up{
+        position: relative;
+        width: 80%;
+        height: 600px;
+        background-color: #fff;
+        border-radius: 20px;
+        .close-button-pop-up{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 2.5%;
+            transition: all .5s ease-in-out;
+            cursor: pointer !important;
+            z-index: 21;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        &_breadcrumb{
+            position: relative;
+            width: 100%;
+            height: 20%;
+            border-radius: 20px 20px 0 0;
+            @include flex(center,center);
+            span{
+                font-size: 0.7em;
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+                color: rgba(0, 0, 0, 0.4);
+                &:hover{
+                    color: rgb(128, 0, 128);
+                }
+            }
+            .select{
+                color: rgb(128, 0, 128);
+            }
+        }
+        &_content{
+            position: relative;
+            width: 100%;
+            height: 80%;
+            border-radius: 0 0 20px 20px;
+            .welcome{
+                width: 100%;
+                height: 100%;
+                @include flex(center,center);
+                flex-direction: column;
+                img{
+                    width: 10%;
+                }
+                h2{
+                    margin: 25px 0;
+                    color: rgb(102, 51, 153);
+                    font-weight: bolder;
+                }
+            }
+            .pop-info{
+                @include flex(center,center);
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 100px;
+                img{
+                    width: 15%;
+                    margin: 50px;
+                }
+            }
+            .pop-contact{
+                @include flex(center,center);
+                width: 100%;
+                height: 100%;
+                p{
+                    font-size: 0.7em;
+                    position: absolute;
+                    bottom: 35px;
+                    left: 30px;
+                    width: 70%;
+                    display: inline;
+                }
+                form{
+                    @include flex(center,center);
+                    width: 100%;
+                    position: relative;
+                    height: 100% !important;
+                    div{
+                        @include flex(center,center);
+                        flex-direction: column;
+                        position: relative;
+                        width: 50%;
+                        height: 80px;
+                        input{
+                            width: 100%;
+                            border: 2px solid rgb(128, 0, 128);
+                            border-radius: 30px;
+                            padding: 5px 20px;
+                            &:focus{
+                                outline: none;
+                            }
+                        }
+                        textarea{
+                            width: 100%;
+                            border: 2px solid rgb(128, 0, 128);
+                            border-radius: 30px;
+                            padding: 5px 20px;
+                            resize: none;
+                            height: 80%;
+                            &:focus{
+                                outline: none;
+                            }
+                        }
+                        span{
+                            position: absolute;
+                            color: rgb(255, 0, 0);
+                            font-size: 0.7em;
+                            bottom: 0;
+                            right: 30px;
+                        }
+                        label{
+                            position: absolute;
+                            color: #000;
+                            font-size: 0.9em;
+                            font-weight: bolder;
+                            top: 0;
+                            left: 30px;
+                        }
+                    }
+                    button{
+                        width: 100%;
+                        border: 2px solid rgb(128, 0, 128);
+                        border-radius: 30px;
+                        padding: 5px 20px;
+                        background-color: rgb(128, 0, 128) !important;
+                        color: #fff
+                    }
+                    .message-box{
+                        @include flex(center,center);
+                        flex-direction: column;
+                        position: relative;
+                        width: 100%;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+        
+    }
+}

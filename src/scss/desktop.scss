@@ -1,0 +1,51 @@
+.desktop{
+    position: relative;
+    width: 100%;
+    padding: 0 !important;
+    height: 100vh;
+    background: rgb(22,0,64);
+    background: linear-gradient(90deg, rgba(22,0,64,1) 0%, rgba(154,6,128,1) 100%);
+    @include flex(flex-start,flex-start);
+    flex-direction: column;
+    &_icons{
+        position: relative;
+        padding: 3px;
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+        @include flex(center,center);
+        border-radius: 10px;
+        z-index: 5;
+        img{
+            width: 80%;
+        }
+        .chrome{
+            width: 70%;
+        }
+        &.active{
+            background-color: rgba(85, 143, 250, 0.404);
+        }
+    }
+    .popUp-button{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 20%;
+        height: 5%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 0; 
+            height: 0; 
+            border-top: 20px solid rgba(0, 0, 0, 0.5); 
+            border-left: 10px solid transparent; 
+            border-right: 10px solid transparent;
+            right: 20px;
+            bottom: -19px;
+        }
+    }
+}
