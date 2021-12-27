@@ -45,7 +45,7 @@ const PopContact = () => {
                         <span className="error">{errors.subject}</span>
                     )}
                 </div>
-                <div className='col-6' className='message-box'>
+                <div className='col-6 message-box'>
                     <label>Mesaj *</label>
                     <textarea className='message' id='message' name='message' placeholder="Mesajınızı giriniz" onChange={handleChange} onBlur={handleBlur} />
                     {errors.message && touched.message && (

@@ -35,7 +35,7 @@ const Instagram = () => {
                         {
                             StoryUser.map((item, index) => (
                                 <div className='story-content'>
-                                    <img src={item.img} alt='photo' />
+                                    <img src={item.img} alt='post' />
                                     <p>{item.name}</p>
                                 </div>
                             ))
@@ -46,17 +46,17 @@ const Instagram = () => {
                             PostUser.map((item, index) => (
                                 <div className='post-card' key={index}>
                                     <div className="user-info">
-                                        <img src={item.img} alt='photo' />
+                                        <img src={item.img} alt='post' />
                                         <h6>{item.name}</h6>
                                     </div>
                                     <div className='post-img-box'>
-                                        <img src={item.img} alt='ph' onClick={() => { setSelectPhoto(item.id+1) }} />
+                                        <img src={item.img} alt='post' onClick={() => { setSelectPhoto(item.id+1) }} />
                                     </div>
                                     <div className='post-img-nav'>
                                         <div>
-                                            <img src={Begen} alt='ph' />
-                                            <img src={Yorum} alt='ph' />
-                                            <img src={Gonder} alt='ph' />
+                                            <img src={Begen} alt='begen' />
+                                            <img src={Yorum} alt='gonder' />
+                                            <img src={Gonder} alt='yorum' />
                                         </div>
                                         <img src={Kaydet} alt='ph' />
                                     </div>
@@ -76,14 +76,14 @@ const Instagram = () => {
                     &&
                     (
                         <div className='big-card' onClick={()=>{setSelectPhoto(null)}}>
-                            <img src={PostUser[selectPhoto-1].img} alt='photo' />
+                            <img src={PostUser[selectPhoto-1].img} alt='post' />
                         </div>
                     )
                 }
                 <div className='col-5 px-0'>
                     <div className='user'>
                         <div>
-                            <img src={NavResim} alt='photo' />
+                            <img src={NavResim} alt='post' />
                         </div>
                         <div>
                             <p className='m-0 mx-3 bold'>yasin.kamis</p>
@@ -96,7 +96,7 @@ const Instagram = () => {
                     <h6 className='h6-col'>Sizin için öneriler</h6>
                     <div className='user my-2'>
                         <div>
-                            <img src={NavResim} alt='photo' />
+                            <img src={NavResim} alt='post' />
                         </div>
                         <div>
                             <p className='m-0 mx-3 bold'>yasin.kamis</p>
@@ -108,7 +108,7 @@ const Instagram = () => {
                     </div>
                     <div className='user my-2'>
                         <div>
-                            <img src={NavResim} alt='photo' />
+                            <img src={NavResim} alt='phost' />
                         </div>
                         <div>
                             <p className='m-0 mx-3 bold'>yasin.kamis</p>
@@ -120,7 +120,7 @@ const Instagram = () => {
                     </div>
                     <div className='user my-2'>
                         <div>
-                            <img src={NavResim} alt='photo' />
+                            <img src={NavResim} alt='post' />
                         </div>
                         <div>
                             <p className='m-0 mx-3 bold'>yasin.kamis</p>
